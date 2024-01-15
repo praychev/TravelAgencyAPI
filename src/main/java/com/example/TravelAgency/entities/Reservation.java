@@ -4,7 +4,7 @@ import com.example.TravelAgency.dtos.ResponseHolidayDTO;
 import com.example.TravelAgency.dtos.ResponseReservationDTO;
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "reservation")
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

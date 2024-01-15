@@ -1,24 +1,21 @@
 package com.example.TravelAgency.dtos;
 
-import com.example.TravelAgency.entities.Location;
-import jakarta.persistence.OneToOne;
-
 import java.time.LocalDate;
 
 public class CreateHolidayDTO {
-    private String Title;
-    private LocalDate createdDate;
+    private String title;
+    private LocalDate startDate;
     private int duration;
     private double price;
     private int freeSlots;
     private Long location;
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
-    public LocalDate getCreatedDate() {
-        return createdDate;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
     public int getDuration() {

@@ -6,13 +6,13 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-@Entity
+@Entity(name = "holiday")
 public class Holiday implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
-    private LocalDate createdDate;
+    private LocalDate startDate;
     private int duration;
     private double price;
     private int freeSlots;
@@ -39,11 +39,11 @@ public class Holiday implements Serializable {
     }
 
     public LocalDate getCreatedDate() {
-        return createdDate;
+        return startDate;
     }
 
     public void setCreatedDate(LocalDate createdDate) {
-        this.createdDate = createdDate;
+        this.startDate = createdDate;
     }
 
     public int getDuration() {
@@ -79,6 +79,6 @@ public class Holiday implements Serializable {
     }
 
     public ResponseHolidayDTO toResponseDTO(){
-        return new ResponseHolidayDTO(id, title, createdDate, duration, price, freeSlots, location.toResponseDTO());
+        return new ResponseHolidayDTO(id, title, startDate, duration, price, freeSlots, location.toResponseDTO());
     }
 }

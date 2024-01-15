@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 
-@Entity
+@Entity(name = "location")
 public class Location implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

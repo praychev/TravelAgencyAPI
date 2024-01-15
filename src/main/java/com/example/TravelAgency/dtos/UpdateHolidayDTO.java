@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class UpdateHolidayDTO {
     private Long id;
     private String title;
-    private LocalDate createdDate;
+    private LocalDate startDate;
     private int duration;
     private double price;
     private int freeSlots;
@@ -19,8 +19,8 @@ public class UpdateHolidayDTO {
         return title;
     }
 
-    public LocalDate getCreatedDate() {
-        return createdDate;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
     public int getDuration() {
